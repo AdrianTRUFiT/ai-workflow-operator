@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  
+  --color-brand-bg: #E4E3E0;
+  --color-brand-ink: #141414;
+  --color-brand-accent: #F27D26;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-ink font-sans antialiased text-[15px] md:text-[17px];
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+.grid-line {
+  @apply border-brand-ink/10;
+}
+
+.data-row {
+  @apply border-b border-brand-ink/10 transition-colors duration-200;
+}
+
+.data-row:hover {
+  @apply bg-brand-ink text-brand-bg;
+}
+
